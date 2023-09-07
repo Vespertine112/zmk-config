@@ -9,8 +9,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define BASE 0
-#define NAV  1
-#define SYM  2
+#define NAV 1
+#define SYM 2
 #define CTRL 3
 #define GAME 4
 
