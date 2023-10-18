@@ -113,15 +113,15 @@
 
                 ctrl_layer {
 // -----------------------------------------------------------------------------------------
-// | PWR  |     |     |     |     | SLP |   |     |     | NXT | PRV |     |      |
+// | PWR  |     |     |     |     | SLP |   |     | NXT | PRV |     |     |      |
 // |BT_CLR| BTB | BTN | mvLT| mvRT|     |   |  PP |VOLU |VOLD |     |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+// | SHFT |     |     |     |     |     |   |     |BRIU |BRID |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         label = "CTRL";
                         bindings = <
-   &kp C_PWR &trans &trans &trans &trans &kp C_SLEEP                        &trans &trans &kp C_NEXT &kp C_PREV &trans &trans
-   &bt BT_CLR &bt BT_PRV &bt BT_NXT &mov_left &mov_right &tog_audio         &kp C_PP  &kp C_VOL_UP &kp C_VOL_DN &trans &trans &trans
-   &kp LSHFT &trans   &trans &trans   &trans   &trans                       &trans &trans &trans &trans &trans &trans
+   &kp C_PWR &trans &trans &trans &trans &kp C_SLEEP                        &trans &kp C_NEXT &kp C_PREV &trans &trans &trans
+   &bt BT_CLR &bt BT_PRV &bt BT_NXT &mov_left &mov_right &tog_audio         &kp C_PP  &kp C_VOL_UP &kp C_VOL_DN &C_SHUFFLE &trans &trans
+   &kp LSHFT &trans   &trans &trans   &trans   &trans                       &trans &C_BRI_UP &C_BRI_DN &trans &trans &trans
                     	     &kp LGUI &tog GAME  &kp SPACE     &kp RET   &trans    &kp RALT
                         >;
                 };
