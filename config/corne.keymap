@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: MIT
  */
 
+// Keymap Author: Vespertine112 [https://github.com/Vespertine112]
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -60,6 +62,19 @@
                         , <&macro_release &kp LCTRL>
                         , <&macro_release &kp LALT>
                         ;
+                };
+        };
+
+        behaviors {
+                ht_hp: positional_hold_tap {
+                compatible = "zmk,behavior-hold-tap";
+                label = "POSITIONAL_HOLD_TAP";
+                label = "HOLD_TAP_HOLD_PRESS";
+                #binding-cells = <2>;
+                tapping_term_ms = <135>;
+                quick_tap_ms = <0>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
                 };
         };
 
